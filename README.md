@@ -1,19 +1,25 @@
-Coding Infrastructure:
-Github Repository
-Will likely move this to the AGI House github organization if we host a hackathon around contributing to this.
+# Anti-HAL
 
-NerfEval:
-Dataset of prompts which get nerfed by Fable
-Use performance comparison to Opus 4.8 to evaluate this
-Create a dataset of tasks on which to attempt to evaluate this (ML Bench jumps to mind)
-Design question: Task level or Prompt level?
-Feature space for the prompts:
-Embeddings?
+![Anti-HAL](src/HKdOi58X0AAg2qw.png)
 
+## Coding Infrastructure
 
-Consider other textual features.
+- GitHub repository
+- Likely move this to the AGI House GitHub organization if we host a hackathon around contributing to this.
 
-Product:
-A Claude Code harness (LMAO we could use the leak) that runs a classifier on prompts before routing the request either to Opus 4.8 or Fable based on whether or not it is going to be nerfed.
-Result - replicating the behavior of claude code on bio (where there’s a dropback to Opus 4.8) for AI research tasks.
+## NerfEval
 
+A dataset of prompts that get nerfed by Fable.
+
+- Use performance comparisons to Opus 4.8 to evaluate this.
+- Create a dataset of tasks for evaluation. ML Bench comes to mind.
+- Design question: task level or prompt level?
+- Feature space for prompts:
+  - Embeddings
+  - Other textual features
+
+## Product
+
+A Claude Code harness that runs a classifier on prompts before routing requests to either Opus 4.8 or Fable based on whether they are likely to be nerfed.
+
+The result is similar to Claude Code's behavior on bio tasks, where it falls back to Opus 4.8, but applied to AI research tasks.
